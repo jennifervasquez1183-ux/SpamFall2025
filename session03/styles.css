@@ -1,0 +1,220 @@
+body {
+
+    background: linear-gradient(to right, #8332a8, #4990d3);
+    padding: 20px 40px; 
+    color: #d87605; 
+    font-family: "Bungee Spice", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin:0;
+
+}
+
+
+header {
+
+    background-color: #4990d3;
+
+
+    padding: 30px 20px;
+    padding-right: 200px;
+    letter-spacing: -8px;
+    word-spacing: 6px;
+    font-size:40px;
+ 
+
+}
+
+
+nav{      
+    background-color: #a76f69(173,151,216);
+    text-align: center;
+    padding:15px 0;
+    letter-spacing: -8px;
+    padding-right: 1%;
+    
+ }
+
+
+ nav a {         
+  color:#909e33;
+        margin: 0 20px;
+      text-decoration: none;
+      font-size: 20px;
+      padding: 5px 10px;      
+      border-radius: 5px
+}
+
+ nav a {
+  font-size: 28px;  
+  font-weight: bold; 
+  color: #EFC3CA;     
+  text-decoration: none; 
+  padding: 15px 25px;    
+  display: inline-block; 
+}
+
+nav a:hover {
+  color: #ffd700;   
+  background-color: #333; 
+  border-radius: 8px;
+}
+
+ h1, h2, h3, h4, h5, h6, p {
+
+    margin: 20px;
+    font-weight: 100;
+    
+}
+
+
+footer {
+
+    padding-bottom: 10px;
+    
+      padding-top: 180px;
+      
+}
+
+main {
+  display: flex;
+  gap: 20;
+    padding: 20px 30px;
+      }
+    
+main {
+
+    background-color: #f694ec;
+
+    padding: 105px;
+
+     width: 150px;
+
+    height: 20px;
+
+   
+  padding-top: 50px;
+
+
+    margin: 60px;
+
+    background-color:#a83259;
+
+}
+
+
+
+ h1 {
+      background-color: #4682b4;
+      color: #CC6CE7;
+      padding: 20px; 
+      border-radius: 10px;
+    }
+main h2 {
+
+    font-size: 50px;
+
+    letter-spacing: -16px;
+
+    margin: 20px 0px;
+        background-color: #0dbd74;
+        
+    padding: 10px;
+        
+    
+
+}
+
+main h3 {
+
+padding-inline-start: 50px;
+}
+
+
+
+
+main p { 
+
+    margin:10px 0px;
+    font-size: 50px;
+   
+    font-optical-sizing: right;
+  font-display: left;
+  
+    
+  font-family: "Rubik Bubbles", system-ui;
+  font-weight: 400;
+
+  
+
+    
+}  
+
+
+
+
+main img {
+
+    width: 100px;
+
+    height: 200px;
+
+    border: 20px solid rgb(8, 110, 135);
+
+    padding: 50px;
+
+    margin:20px;
+   
+    
+    
+    background-color: rgb(110, 108, 49);
+
+    border-style: dotted;
+    
+  
+
+}
+
+main {
+   
+    padding: 0px;         
+    
+    margin: auto;        
+
+    text-align: center;    
+    width: 60%;            
+}
+
+h1 {
+  border-bottom: 5px solid #909e33;
+  margin-bottom: 20px;   
+
+
+}
+
+h2 {
+  border-bottom: 4px dotted #540433;
+}
+
+div {
+  border-bottom: double #0dbdae;
+}
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
