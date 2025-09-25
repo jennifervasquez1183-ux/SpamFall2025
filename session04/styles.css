@@ -1,0 +1,90 @@
+body {
+background-color: #DFCD52;
+    margin: 0;
+    padding: 0;
+  font-family: "Bungee Spice", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
+ background-image: url("images/moss02.jpeg");
+
+    background-attachment: fixed;
+    
+}
+
+#wrapper{     
+ 
+
+    width: 60%;
+    background-color:rgb(204, 108, 231);  
+    margin: 40px auto;
+   padding: 20px 100px
+
+}
+header h1{ 
+     font-family: "Rubik Gemstones", system-ui;
+  font-weight: 500;
+  font-style: normal;
+ }
+
+  header h2{   
+    background-color:rgb(188, 221, 184);  
+
+font-family: "Bitcount Grid Double Ink", system-ui;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style:normal;
+  font-size: 24px;
+
+  }
+
+span.wow {
+
+color: #BFD641;
+
+font-weight: 900;
+
+text-transform: uppercase;
+
+
+font-weight: italic;
+
+    
+}
+
+main p {
+
+    font-size: 20px;
+
+    line-height: 30px;
+
+}  
+
+main table td {
+    text-align: center;
+    background-color:#41B7BB(240, 195, 202);
+    width: 100%;
+}
+main table th{      
+    background-color:#a5c56e
+    
+}
+main table td,
+main table td {
+    padding:10px;
+    border: 1px solid #0bce48
+}
+
+.mushroom-table img {
+  width: 130px; 
+  height: auto;  
+  border: 6px solid #0d9e66;
+  border-radius: 10px;
+  padding: 4px;
+  background-color: #d6c741;
+}
+
+
+
+
+
