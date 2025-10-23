@@ -1,0 +1,158 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; 
+  background-color: #178ba8;           
+  background-image: url("Gallery/pink u.webp"); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Wrapper */
+#wrapper {
+  max-width: 1500px;
+  background-color: rgba(50, 212, 220, 0.9); 
+  border: solid #72c58a 10px;                
+  margin: 10px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#wrapper > * {
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background: rgba(15, 234, 227, 0.8);
+  order: 1;
+  flex: 0 0 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  color: #033e6b;
+}
+
+/* Main */
+main {
+  background: rgba(65, 105, 225, 0.8); 
+  order: 3;
+  flex: 1 1 500px;
+  color: #fff;
+}
+
+/* Buttons */
+main div.buttonAbsolute {
+  background-color: #2a52be;
+  color: #f0f5f9;
+  text-align: center;
+  width: 150px;
+  opacity: 0.9;
+  padding: 15px;
+  border-radius: 125px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+main div.buttonRelative {
+  background-color: #4ca3dd;
+  width: 120px;
+  padding: 10px;
+  color: #033e6b;
+  text-align: center;
+  position: relative;
+  left: 40px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+
+nav {
+  background: #034f84;
+  order: 2;
+  flex: 0 0 200px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #4ca3dd;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+nav ul li:hover {
+  background-color: #2a52be;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+aside {
+  background: #033e6b;
+  color: #f0f5f9;
+  order: 4;
+  flex: 1 0 200px;
+  padding: 15px;
+}
+
+
+footer {
+  background: #72c58a;
+  order: 5;
+  flex: 0 0 100%;
+  padding: 15px;
+  color: #033e6b;
+}
+
+/* Gallery Section */
+.image-gallery {  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-gallery img {
+  width: 45%;
+  border-radius: 10px;
+  border: 3px solid #98c1d9;
+  transition: transform 0.3s ease;
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif; /* Google Font */
+}
+
+/* Paragraphs */
+p {
+  line-height: 1.6;
+}
