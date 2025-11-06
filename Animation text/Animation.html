@@ -1,0 +1,244 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Butterfly Transformation</title>
+  <style>
+   
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 50px;
+      color: #2C28F4;
+      background: linear-gradient(#4DEFB0, #EC7A99);
+      margin: 0;
+      padding: 0;
+      line-height: 1.9;
+    }
+
+    .kablammo, h1, h2 {
+      font-family: 'Kablammo', system-ui;
+      font-optical-sizing: auto;
+      font-weight: 800;
+      font-style: normal;
+      font-variation-settings: "MORF" 20;
+      color: #62bde4;
+    }
+
+    /* === Header === */
+    header {
+      background-color: #97e9fd;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .flex-nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 2rem;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .flex-nav a {
+      text-decoration: none;
+      color: rgb(223, 197, 123);
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .flex-nav a:hover {
+      color: #d61699;
+    }
+
+    .flex-nav a.active {
+      color: rgb(194, 250, 73);
+      border-bottom: 2px solid #49FAFA;
+    }
+
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .grid-layout img {
+      width: 85%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 5px 12px rgba(39, 201, 77, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .grid-layout img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(39, 201, 77, 0.4);
+    }
+
+
+
+    .butterfly-area {
+      position: relative;
+      height: 60vh;
+      overflow: hidden;
+      margin: 2rem 0;
+    }
+
+    .butterfly {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: url('Gallery/__-drz-__-CK7rdTauhDE-unsplash.jpg') no-repeat center/contain;
+      animation: fly 10s linear infinite;
+    }
+
+    .butterfly.small {
+      width: 50px;
+      height: 50px;
+      animation-duration: 7s;
+    }
+
+    .butterfly.delay {
+      animation-delay: 3s;
+    }
+
+    @keyframes fly {
+      0% { transform: translate(0, 0) rotate(0deg); opacity: 0.8; }
+      50% { transform: translate(50vw, -20vh) rotate(15deg); opacity: 1; }
+      100% { transform: translate(-10vw, 0) rotate(-10deg); opacity: 0.9; }
+    }
+
+    
+    .info {
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    
+    footer {
+      background-color: #a24eff;
+      padding: 1rem;
+      text-align: center;
+      color:#49FAFA;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color:#49FABC;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px;
+      }
+
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+
+      figcaption {
+        font-size: 0.85rem;
+      }
+
+      section {
+        padding: 1rem 0;
+      }
+
+    
+      .flex-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 1rem;
+        border-radius: 12px;
+      }
+
+      .flex-nav a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        text-align: center;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .flex-nav a:hover,
+      .flex-nav a.active {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        color: #d61699;
+      }
+
+      
+      .grid-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      .grid-layout img {
+        width: 90%;
+        max-width: 350px;
+        height: auto;
+      }
+
+      
+      .butterfly-area {
+        height: 40vh;
+      }
+
+      .butterfly {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Butterfly Transformation</h1>
+    <nav class="flex-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="animation.html" class="active">Animation</a></li>
+        <li><a href="image.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grid-layout">
+    <section>
+      <h2>The Beginning</h2>
+      <p>Butterflies symbolize growth, change, and beauty. In this project, we explore their transformation — from caterpillar to cocoon to a fluttering butterfly.</p>
+    </section>
+    <section>
+      <img src="Gallery/nathan-dumlao-mNLymMqX7iE-unsplash.jpg" alt="Butterfly emerging">
+    </section>
+  </main>
+
+ 
+
+  <footer>
+    <p>Created by Jennifer Vasquez</p>
+  </footer>
+</body>
+</html>
