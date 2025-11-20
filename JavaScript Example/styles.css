@@ -1,0 +1,82 @@
+body {
+    font-family: helvetica, arial, sans-serif;
+    background: linear-gradient(#355e86, #0f3e63);
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #87c9e3;
+}
+
+body {
+  font-size: 40px;
+}
+.container {
+    width: 15%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    padding: 10px;
+    background: #08304e;
+    border-right: 2px solid #0a4f76;
+    color: white;
+}
+
+#left-container { left: 0; }
+#right-container { right: 0; }
+
+.plant-holder {
+    position: relative;
+    height: 12%;
+}
+
+.plant {
+    position: absolute;
+    max-width: 120%;
+    max-height: 120%;
+    cursor: grab;
+    z-index: 3;
+}
+
+
+#terrarium {
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+}
+
+
+.tank-glass {
+    width: 100%;
+    height: 100%;
+    background: rgba(180, 220, 255, 0.15);
+    border: 5px solid rgba(200, 230, 255, 0.4);
+    border-radius: 20px;
+    backdrop-filter: blur(2px);
+    position: absolute;
+}
+
+
+.water {
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(#7eb6ec, #2978d2);
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    bottom: 25%;
+    opacity: 0.8;
+}
+
+
+.sand {
+    width: 100%;
+    height: 25%;
+    background: #d9c07c;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    bottom: 0;
+}
