@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SunflowerValley</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Pacifico&display=swap" rel="stylesheet">
+
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <h1 class="logo">SunflowerValley</h1>
+    
+
+    <button class="menu-toggle">☰</button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<div id="p5-holder"></div>
+
+
+
+<img src="Images/sunfl logo.png" alt="Sunflower Tote">
+<main>
+  <div class="content-wrapper">
+    <div class="text-area">
+      <h2>Welcome to SunflowerValley</h2>
+      <p>Handmade totes inspired by sunflowers.</p>
+    </div>
+
+    <div class="canvas-area" id="p5-holder"></div>
+  </div>
+  <div id="p5-holder" style="width:100%; max-width:600px; margin: auto;"></div>
+
+</main>
+
+
+<section class="canvas-preview">
+  <h3>Preview Our Tote Animation</h3>
+  <div class="iframe-container">
+    <iframe
+      src="https://editor.p5js.org/jennifervasquez22/embed/Tq9owvfxh"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+  </div>
+</section>
+
+<h3>Preview Our Tote </h3>
+<div id="p5-holder"></div>
+<footer>
+  <p>Created by Jennifer Vasquez</p>
+  <p>Sources: Google Fonts, jQuery, p5.js</p>
+</footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+
+<script src="js/sketch.js"></script>
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+    $('.product').hover(
+      function () {
+        $(this).css('background', '#ffe082');
+      },
+      function () {
+        $(this).css('background', '#fff4d0');
+      }
+    );
+  });
+</script>
+<script src="js/script.js"></script>
+
+
+</body>
+</html>
