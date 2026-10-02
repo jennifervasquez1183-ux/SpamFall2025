@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Butterfly Gallery</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennifer Vasquez</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-grid{display:grid;grid-template-columns:1fr;gap:7rem;max-width:1100px;margin:auto;padding:4rem 2rem;}
+    .video-card{background:rgba(255,255,255,0.97);padding:2.5rem;border-radius:30px;box-shadow:0 15px 40px rgba(0,0,0,0.2);transition:0.4s;}
+    .video-card:hover{transform:scale(1.03);}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:22px;background:#000;transform:scale(1.08);transition:0.4s;}
+    .video-card:hover .video-wrapper{transform:scale(1.12);}
+    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+    .video-card h2{font-size:30px;margin:22px 0 10px;color:#9c96ef;}
+    .video-card p{font-size:19px;color:#333;}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Butterfly Gallery</h1>
-    <nav class="flex-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="animation.html">Animation</a></li>
-        <li><a href="image.html">Gallery</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <h1>Butterfly Gallery - Jennifer Vasquez</h1>
+  <nav class="flex-nav"><ul>
+    <li><a href="./index.html" class="active">Home</a></li>
+    <li><a href="./image.html">Gallery</a></li>
+    <li><a href="./animation.html">Transformation</a></li>
+    <li><a href="./movement.html">Movement</a></li>
+  </ul></nav>
+</header>
+<main>
+  <section class="hero" style="display:grid;grid-template-columns:420px 1fr;gap:4rem;padding:5rem 4rem;max-width:1300px;margin:auto;align-items:center;">
+    <img src="Gallery/me.jpeg" style="width:100%;max-width:380px;border-radius:50%;border:6px solid white;">
+    <div><h2 style="font-size:3.2rem;color:#9c96ef;">Jennifer Vasquez</h2><p style="font-size:20px;line-height:1.9;"><strong>Editor | Coder | Producer | Documentaries</strong><br>Hunter College — aspiring Professor.<br><br>My Work: Women NYC interviews + 2D animations Dominican Republic Cibao.</p></div>
+  </section>
 
-  <main class="image-grid">
-    <figure><img src="Gallery/british-library-mNb93svlMzA-unsplash.jpg" alt="Butterfly 1"><figcaption>Stage 1: Caterpillar</figcaption></figure>
-    <figure><img src="Gallery/butte.jpg" alt="Butterfly 2"><figcaption>Stage 2: Cocoon</figcaption></figure>
-    <figure><img src="Gallery/cocoon.jpg" alt="Butterfly 3"><figcaption>Stage 3: Transformation</figcaption></figure>
-    <figure><img src="Gallery/aaron-burden--TYvt5pmKng-unsplash.jpg" alt="Butterfly 4"><figcaption>Stage 4: Flight</figcaption></figure>
-  </main>
-
-  <footer>
-    <p>Butterfly Growth Journey represents life.</p>
-  </footer>
+  <section class="video-grid">
+    <!-- 1 - YOUR SHORT ONE vKai0MpeuTs - CORRECT -->
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/vKai0MpeuTs?autoplay=1&mute=1&loop=1&playlist=vKai0MpeuTs&rel=0&controls=1" allow="autoplay; fullscreen" allowfullscreen loading="lazy"></iframe></div><h2>NEW SHORT - vKai0MpeuTs</h2><p>https://youtu.be/vKai0MpeuTs - THIS IS THE SHORT ONE - super zoomed</p></div>
+    
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/I_6SyZteJhc?autoplay=1&mute=1&loop=1&playlist=I_6SyZteJhc&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Women NYC - Different Jobs</h2><p>Interviews women NYC</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/YdvG4Dpen4M?autoplay=1&mute=1&loop=1&playlist=YdvG4Dpen4M&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Cibao Project 2D</h2><p>Dominican Republic 2D animation</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/WWSYSSaY3Yo?autoplay=1&mute=1&loop=1&playlist=WWSYSSaY3Yo&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>2D Animation Text</h2><p>Environment text motion</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/hb7jfV55O9o?autoplay=1&mute=1&loop=1&playlist=hb7jfV55O9o&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Poem DR</h2><p>2D visual poetry</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/BPYR0HgJZUU?autoplay=1&mute=1&loop=1&playlist=BPYR0HgJZUU&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Earthquake Film</h2><p>Documentary short</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/BC32ae4nMHk?autoplay=1&mute=1&loop=1&playlist=BC32ae4nMHk&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Jen Dulce - DR</h2><p>Documentary Dominican Republic</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/8I6Am9syWYQ?autoplay=1&mute=1&loop=1&playlist=8I6Am9syWYQ&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Official Dance Film</h2><p>Movement choreography</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/kq01Oxu5YFI?autoplay=1&mute=1&loop=1&playlist=kq01Oxu5YFI&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Nail Close Up</h2><p>Women NYC series close up BIG ZOOM</p></div>
+    <div class="video-card"><div class="video-wrapper"><iframe src="https://www.youtube.com/embed/ALxQ-ta9TBw?autoplay=1&mute=1&loop=1&playlist=ALxQ-ta9TBw&rel=0&controls=1" allow="autoplay; fullscreen" loading="lazy" allowfullscreen></iframe></div><h2>Nail Latin</h2><p>Latina nail tech interview</p></div>
+  </section>
+</main>
+<footer>
+  <nav class="flex-nav"><ul>
+    <li><a href="./index.html">Home</a></li><li><a href="./image.html">Gallery</a></li><li><a href="./animation.html">Transformation</a></li><li><a href="./movement.html">Movement</a></li>
+  </ul></nav>
+  <p>Created by Jennifer Vasquez | Hunter College</p>
+</footer>
 </body>
 </html>

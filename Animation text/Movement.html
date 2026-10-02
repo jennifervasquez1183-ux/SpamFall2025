@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movement</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .butterfly-area{position:relative;height:85vh;width:100%;overflow:hidden;background:linear-gradient(#4DEFB0,#EC7A99);}
+    .butterfly{position:absolute;font-size:100px;animation:flyAcross 9s linear infinite,flutter 0.3s ease-in-out infinite alternate;}
+    .butterfly:nth-child(1){top:15%;animation-delay:0s;font-size:110px;}
+    .butterfly:nth-child(2){top:35%;animation-delay:1s;font-size:70px;animation-duration:7s;}
+    .butterfly:nth-child(3){top:55%;animation-delay:2s;font-size:130px;animation-duration:12s;}
+    .butterfly:nth-child(4){top:75%;animation-delay:0.5s;font-size:90px;animation-duration:10s;}
+    @keyframes flyAcross{0%{left:-20%;}100%{left:120%;}}
+    @keyframes flutter{0%{transform:scaleY(1);}100%{transform:scaleY(0.6) scaleX(1.2);}}
+    .moving-strip{display:flex;gap:1.5rem;padding:2rem;overflow:hidden;background:rgba(255,255,255,0.7);animation:scroll 20s linear infinite;}
+    .moving-strip img{width:280px;height:200px;object-fit:cover;border-radius:15px;flex-shrink:0;}
+    @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+    .big-text{text-align:center;padding:3rem 1.5rem;font-size:24px;font-weight:700;color:#2C28F4;background:white;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Metamorphosis in Motion</h1>
+  <nav class="flex-nav">
+    <ul>
+      <li><a href="./index.html">Home - Me & Videos</a></li>
+      <li><a href="./image.html">Gallery</a></li>
+      <li><a href="./animation.html">Transformation</a></li>
+      <li><a href="./movement.html" class="active">Movement</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div class="butterfly-area">
+    <div class="butterfly">🦋</div><div class="butterfly">🦋</div><div class="butterfly">🦋</div><div class="butterfly">🦋</div><div class="butterfly">🦋</div>
+  </div>
+  <div style="overflow:hidden;">
+    <div class="moving-strip">
+      <img src="Gallery/me.jpeg"><img src="Gallery/british-library-mNb93svlMzA-unsplash.jpg"><img src="Gallery/butte.jpg"><img src="Gallery/cocoon.jpg"><img src="Gallery/aaron-burden--TYvt5pmKng-unsplash.jpg"><img src="Gallery/me.jpeg"><img src="Gallery/british-library-mNb93svlMzA-unsplash.jpg"><img src="Gallery/butte.jpg">
+    </div>
+  </div>
+  <p class="big-text">Watch butterflies flutter and my photos slide — freedom and growth from Dominican Republic to NYC.</p>
+</main>
+<footer>
+  <nav class="flex-nav">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./image.html">Gallery</a></li>
+      <li><a href="./animation.html">Transformation</a></li>
+      <li><a href="./movement.html">Movement</a></li>
+    </ul>
+  </nav>
+  <p>Created by Jennifer Vasquez</p>
+</footer>
+</body>
+</html>
