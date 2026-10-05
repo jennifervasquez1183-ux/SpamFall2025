@@ -1,13 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  <nav class="flex-nav">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="image.html">Gallery</a></li>
-    <li><a href="animation.html">Transformation</a></li>
-    <li><a href="movement.html">Movement</a></li>
-  </ul>
-</nav>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,38 +18,35 @@
     </ul>
   </nav>
 </header>
-
 <main class="grid-layout">
   <section>
     <h2>The Beginning</h2>
-    <p>Growth, change, beauty — caterpillar to cocoon to butterfly.<br><br>Like my journey from Dominican Republic to NYC. Transformation is not linear. It's layered, soft, powerful.</p>
+    <p id="typewriter"></p>
   </section>
   <section>
-    <img src="Gallery/nathan-dumlao-mNLymMqX7iE-unsplash.jpg" alt="Butterfly emerging" id="moveImg">
+    <img src="Gallery/nathan-dumlao-mNLymMqX7iE-unsplash.jpg" alt="Butterfly emerging" id="moveImg" style="cursor:pointer;">
   </section>
 </main>
-
 <footer>
-  <nav class="flex-nav">
-    <ul>
-      <li><a href="index.html">Home - Me & Videos</a></li>
-      <li><a href="image.html">Gallery</a></li>
-      <li><a href="animation.html" class="active">Transformation</a></li>
-      <li><a href="movement.html">Movement</a></li>
-    </ul>
-  </nav>
-  <p>Created by Jennifer Vasquez — Transformation is life</p>
+  <p>Created by Jennifer Vasquez — Aspiring Professor</p>
 </footer>
-
 <script>
-  document.addEventListener('mousemove', (e) => {
-    const img = document.getElementById('moveImg');
-    if(img){
-      const x = (e.clientX / window.innerWidth - 0.5) * 30;
-      const y = (e.clientY / window.innerHeight - 0.5) * 20;
-      img.style.transform = 'translate(' + x + 'px, ' + y + 'px)';
-    }
-  });
+const fullText = "They call her fragile. Like a butterfly. They have never seen how far a butterfly flies to get home. The butterfly is a woman who has worked, migrated, and transformed. She starts as a caterpillar — invisible labor, hands that clean, cook and care.";
+let idx=0;
+function typeWriter(){
+  if(idx<fullText.length){
+    document.getElementById("typewriter").innerHTML += fullText.charAt(idx);
+    idx++; setTimeout(typeWriter,35);
+  }
+}
+typeWriter();
+document.addEventListener('mousemove',(e)=>{
+  const img=document.getElementById('moveImg');
+  const x=(e.clientX/window.innerWidth-0.5)*30;
+  const y=(e.clientY/window.innerHeight-0.5)*20;
+  img.style.transform='translate('+x+'px,'+y+'px)';
+});
+document.getElementById('moveImg').onclick=function(){this.style.transform=this.style.transform.includes('scale(1.5)')?'':'translate(0,0) scale(1.5)';};
 </script>
 </body>
 </html>
