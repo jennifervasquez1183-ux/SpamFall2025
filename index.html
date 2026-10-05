@@ -1,107 +1,97 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jennifer Vasquez</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .video-grid{display:grid;grid-template-columns:1fr;gap:4rem;max-width:1000px;margin:auto;padding:3rem 2rem;}
+    .video-card{background:#fff;padding:1.8rem;border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,0.15);}
+    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:18px;background:#000;cursor:pointer;}
+    .video-wrapper img.thumb{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;}
+    .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:70px;background:rgba(255,255,255,0.9);width:90px;height:90px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:0.3s;}
+    .video-wrapper:hover .play-btn{transform:translate(-50%,-50%) scale(1.1);}
+    .video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:none;}
+    .video-card h2{font-size:26px;margin:18px 0 8px;color:#6b5ce7;}
+    .video-card p{font-size:18px;color:#333;line-height:1.6;}
+    /* Profile zoom */
+    .profile-pic{width:100%;max-width:340px;border-radius:50%;border:5px solid white;cursor:zoom-in;transition:0.4s;box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+    .profile-pic:hover{transform:scale(1.05);}
+    .profile-pic.zoomed{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(1.8);z-index:9999;border-radius:20px;max-width:80vw;max-height:80vh;width:auto;aspect-ratio:auto;}
+    .overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:9998;}
+    .overlay.show{display:block;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Butterfly Gallery - Jennifer Vasquez</h1>
+  <nav class="flex-nav"><ul>
+    <li><a href="./index.html" class="active">Home</a></li>
+    <li><a href="./image.html">Gallery</a></li>
+    <li><a href="./animation.html">Transformation</a></li>
+    <li><a href="./movement.html">Movement</a></li>
+  </ul></nav>
+</header>
 
+<main>
+  <section class="hero">
+    <img src="Gallery/me.jpeg" class="profile-pic" id="profilePic" alt="Jennifer Vasquez">
+    <div><h2 style="font-size:3rem;color:#6b5ce7;">Jennifer Vasquez</h2>
+    <p style="font-size:19px;line-height:1.8;"><strong>Editor | Producer | Documentarian | Hunter College</strong><br><br>
+    B.A. in Arts - Aspiring Professor of Art & Production. My work explores transformation, movement, and labor through intimate portraits of women in NYC. <strong>Butterfly Gallery</strong> documents diverse labor — care work, salon work, dance — examining how movement shapes identity.</p>
+    <p><em>"I teach how to see — film is not just what we watch, it's how we understand each other."</em></p>
+    </div>
+  </section>
 
-<!-- comments -->
+  <section class="video-grid">
+    <!-- Video cards - click thumb to play, click again to pause -->
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'vKai0MpeuTs')"><img class="thumb" src="https://img.youtube.com/vi/vKai0MpeuTs/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/vKai0MpeuTs?rel=0&controls=1" allow="fullscreen"></iframe></div><h2>Dominatrex — Power & Labor</h2><p>She puts on leather not to please him, but to finally be the boss. A Latina woman gives the orders — and gets paid for it.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'I_6SyZteJhc')"><img class="thumb" src="https://img.youtube.com/vi/I_6SyZteJhc/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/I_6SyZteJhc?rel=0&controls=1"></iframe></div><h2>Women NYC — Different Jobs</h2><p>Two Jobs, One Woman. Mother in the morning, worker at night — transformation is not magic, it's a second shift.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'YdvG4Dpen4M')"><img class="thumb" src="https://img.youtube.com/vi/YdvG4Dpen4M/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/YdvG4Dpen4M?rel=0&controls=1"></iframe></div><h2>Cibao Baila</h2><p>In Cibao, women don't just dance — they pray with their hips. Every step says: I am still here, I am still joy.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'WWSYSSaY3Yo')"><img class="thumb" src="https://img.youtube.com/vi/WWSYSSaY3Yo/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/WWSYSSaY3Yo?rel=0&controls=1"></iframe></div><h2>2D Animation Text</h2><p>She works after midnight, not because she is broken, but because she pays rent and tuition.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'hb7jfV55O9o')"><img class="thumb" src="https://img.youtube.com/vi/hb7jfV55O9o/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/hb7jfV55O9o?rel=0&controls=1"></iframe></div><h2>Poem DR — Visual Poetry</h2><p>She carries Dominican sugar, NYC rent, and a whole family on a wing.</p></div>
 
-<html>
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'BPYR0HgJZUU')"><img class="thumb" src="https://img.youtube.com/vi/BPYR0HgJZUU/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/BPYR0HgJZUU?rel=0&controls=1"></iframe></div><h2>Earthquake Film — Temblor</h2><p>When the earth shook in Dominicana, it wasn't just houses that cracked — it was the phone calls from NYC at 3AM, women asking "Mami, estás bien?"</p></div>
 
-<!-- comments -->
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'BC32ae4nMHk')"><img class="thumb" src="https://img.youtube.com/vi/BC32ae4nMHk/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/BC32ae4nMHk?rel=0&controls=1"></iframe></div><h2>Dulce de Coco</h2><p>She makes dulce with the same hands that braided hair, cleaned houses, signed school papers — sweet because she made it.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'8I6Am9syWYQ')"><img class="thumb" src="https://img.youtube.com/vi/8I6Am9syWYQ/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/8I6Am9syWYQ?rel=0&controls=1"></iframe></div><h2>Dance Student Film</h2><p>She dances while she studies because if she stops moving, she might disappear.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'kq01Oxu5YFI')"><img class="thumb" src="https://img.youtube.com/vi/kq01Oxu5YFI/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/kq01Oxu5YFI?rel=0&controls=1"></iframe></div><h2>Hands That Work — Nail Techs NYC</h2><p>Beauty work is survival work, paid by the tip, held by sisterhood.</p></div>
 
+    <div class="video-card"><div class="video-wrapper" onclick="playVideo(this,'ALxQ-ta9TBw')"><img class="thumb" src="https://img.youtube.com/vi/ALxQ-ta9TBw/hqdefault.jpg"><div class="play-btn">▶</div><iframe data-src="https://www.youtube.com/embed/ALxQ-ta9TBw?rel=0&controls=1"></iframe></div><h2>Chisme & Esmalte</h2><p>In the nail salon, Latina women work and gossip — chisme is not drama, it's the news network that men don't hear.</p></div>
+  </section>
+</main>
 
+<div class="overlay" id="overlay" onclick="closeZoom()"></div>
 
-    <head>
+<footer>
+  <nav class="flex-nav"><ul><li><a href="./index.html">Home</a></li><li><a href="./image.html">Gallery</a></li><li><a href="./animation.html">Transformation</a></li><li><a href="./movement.html">Movement</a></li></ul></nav>
+  <p>Created by Jennifer Vasquez | Hunter College — Aspiring Professor</p>
+</footer>
 
-
-
-     <title>Session 01: Jennifer Vasquez</title>
-
-        <meta charset="UTF-8"
-        <meta name="description"content="This is a basic webpage experimenting with HTML code.">
-        <meta name=" keywords" content="Hunter college, HTML">
-        <meta name="author" content="Jennifer Vasquez">
-     
-    </head>
-
-
-    <!-- visible -->
-
-     <body>
-
-
-        Jennifer Vasquez
-
-
-
-
-     </body>
-     <h1>Jennifer Vasquez</h1>
-     <h2> Hunter Cleege</h2>
-     <h3>Fall 2025</h3>
-     <h4> Web Production 1</h4>
-     <h5> Afternoon Session</h5>
-     <h6> 1pm</h6>
-     <p><a href="mailto:jennifervasquez1183@gmail.com?subject=Web Production">Email Me</a></p>
-
-
-
-
-
-
-     <!-- hr creates a line -->
-     <hr>
-
-     <h2>  Exploring web production through  Mycelial Metaphors</h2>
-     <h3>  Links and Resources</h3>
-
-     <p></a  href= https://mushroomcoloratlas.com/ >Mushroom Color Atlas</a><p>
-
-     </p><a href=" https://mushroomcoloratlas.com/ mushorooms/"
-     target="_blank">mushorooms</a></p>
-
-     <p>Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-Where can I get some?
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-
-5
-	paragraphs
-	words
-	bytes
-	lists
-	Start with 'Lorem
-ipsum dolor sit amet...'     </p>
-
-<p>        1914 translation by H. Rackham
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-
-</p>
-
-
-
-
-
-
-
-
-
-
-
+<script>
+function playVideo(wrapper, id){
+  let iframe = wrapper.querySelector('iframe');
+  let thumb = wrapper.querySelector('.thumb');
+  let btn = wrapper.querySelector('.play-btn');
+  if(iframe.style.display==='block'){
+    iframe.style.display='none'; thumb.style.display='block'; btn.style.display='flex';
+    iframe.src='';
+  } else {
+    iframe.src = iframe.dataset.src + '?autoplay=1';
+    iframe.style.display='block'; thumb.style.display='none'; btn.style.display='none';
+  }
+}
+// Profile zoom
+const pic=document.getElementById('profilePic');
+const over=document.getElementById('overlay');
+pic.addEventListener('click',()=>{pic.classList.add('zoomed');over.classList.add('show');});
+function closeZoom(){pic.classList.remove('zoomed');over.classList.remove('show');}
+</script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-

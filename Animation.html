@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transformation - Jennifer Vasquez</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .type-text{font-size:22px;line-height:2;color:#333;min-height:200px;}
+    .cursor{border-right:3px solid #6b5ce7;animation:blink 0.7s infinite;}
+    @keyframes blink{0%,50%{border-color:#6b5ce7}51%,100%{border-color:transparent}}
+    .grid-layout h2{font-size:3.5rem;color:#6b5ce7;line-height:1.1;}
+    #moveImg{transition:transform 0.1s ease-out;cursor:zoom-in;}
+    #moveImg.zoomed{transform:scale(1.5)!important;position:relative;z-index:10;}
+  </style>
+</head>
+<body>
+<header>
+  <h1>Butterfly Transformation</h1>
+  <nav class="flex-nav">
+    <ul>
+      <li><a href="index.html">Home - Me & Videos</a></li>
+      <li><a href="image.html">Gallery</a></li>
+      <li><a href="animation.html" class="active">Transformation</a></li>
+      <li><a href="movement.html">Movement</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="grid-layout">
+  <section>
+    <h2>The Beginning</h2>
+    <p id="typewriter" class="type-text"></p>
+  </section>
+  <section>
+    <img src="Gallery/nathan-dumlao-mNLymMqX7iE-unsplash.jpg" alt="Butterfly emerging" id="moveImg">
+    <p style="font-size:16px;color:#777;margin-top:10px;">Move mouse → image follows. Click to zoom.</p>
+  </section>
+</main>
+
+<footer>
+  <nav class="flex-nav">
+    <ul>
+      <li><a href="index.html">Home - Me & Videos</a></li>
+      <li><a href="image.html">Gallery</a></li>
+      <li><a href="animation.html" class="active">Transformation</a></li>
+      <li><a href="movement.html">Movement</a></li>
+    </ul>
+  </nav>
+  <p>Created by Jennifer Vasquez — Transformation is life | Aspiring Professor</p>
+</footer>
+
+<script>
+// Typewriter effect - professional
+const text = `They call her fragile. Like a butterfly. They have never seen how far a butterfly flies to get home.\n\nThe butterfly is a woman who has worked, migrated, and transformed. She starts as a caterpillar — invisible labor, hands that clean, cook and care. In the chrysalis — the quiet study, the struggle of learning. Then wings — earned through education, practice, and resilience. This is transformation as pedagogy: we teach what we have lived.`;
+let i=0;
+const el=document.getElementById('typewriter');
+function type(){
+  if(i<text.length){
+    el.innerHTML = text.substring(0,i+1) + '<span class="cursor"></span>';
+    i++; setTimeout(type, 30);
+  } else {
+    el.innerHTML = text;
+  }
+}
+type();
+
+// Mouse move + zoom
+const img=document.getElementById('moveImg');
+document.addEventListener('mousemove',(e)=>{
+  const x=(e.clientX/window.innerWidth-0.5)*30;
+  const y=(e.clientY/window.innerHeight-0.5)*20;
+  if(!img.classList.contains('zoomed')) img.style.transform=`translate(${x}px,${y}px)`;
+});
+img.addEventListener('click',()=>{img.classList.toggle('zoomed');});
+</script>
+</body>
+</html>
